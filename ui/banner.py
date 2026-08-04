@@ -10,30 +10,27 @@ class Banner:
     """generates and displays the insta_dossier ASCII banner"""
 
     BANNER_ART = r"""
-  ╔══════════════════════════════════════════════════════════════════════╗
-  ║  ██╗███╗   ██╗███████╗████████╗ █████╗     ██████╗  ██████╗ ███████╗███████╗██╗███████╗██████╗  ║
-  ║  ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗    ██╔══██╗██╔═══██╗██╔════╝██╔════╝██║██╔════╝██╔══██╗ ║
-  ║  ██║██╔██╗ ██║███████╗   ██║   ███████║    ██║  ██║██║   ██║███████╗█████╗  ██║█████╗  ██████╔╝ ║
-  ║  ██║██║╚██╗██║╚════██║   ██║   ██╔══██║    ██║  ██║██║   ██║╚════██║██╔══╝  ██║██╔══╝  ██╔══██╗ ║
-  ║  ██║██║ ╚████║███████║   ██║   ██║  ██║    ██████╔╝╚██████╔╝███████║███████╗██║███████╗██║  ██║ ║
-  ║  ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚═╝╚══════╝╚═╝  ╚═╝ ║
-  ║                                                                                                      ║
-  ║                      >> instagram osint dossier generator v1.0 <<                                     ║
-  ║                         target → extract → map → reconstruct → export                                ║
-  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+    ██╗███╗   ██╗███████╗████████╗ █████╗     ██████╗  ██████╗ ███████╗███████╗██╗███████╗██████╗  
+    ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗    ██╔══██╗██╔═══██╗██╔════╝██╔════╝██║██╔════╝██╔══██╗ 
+    ██║██╔██╗ ██║███████╗   ██║   ███████║    ██║  ██║██║   ██║███████╗█████╗  ██║█████╗  ██████╔╝ 
+    ██║██║╚██╗██║╚════██║   ██║   ██╔══██║    ██║  ██║██║   ██║╚════██║██╔══╝  ██║██╔══╝  ██╔══██╗ 
+    ██║██║ ╚████║███████║   ██║   ██║  ██║    ██████╔╝╚██████╔╝███████║███████╗██║███████╗██║  ██║ 
+    ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚═╝╚══════╝╚═╝  ╚═╝ 
+                                                                                                        
+                        >> instagram osint dossier generator v1.0 <<                                     
+                           target → extract → map → reconstruct → export                                
 """
 
     BANNER_SMALL = r"""
-  ╔════════════════════════════════════════╗
-  ║  ██╗███╗   ██╗███████╗████████╗ █████╗ ║
-  ║  ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗║
-  ║  ██║██╔██╗ ██║███████╗   ██║   ███████║║
-  ║  ██║██║╚██╗██║╚════██║   ██║   ██╔══██║║
-  ║  ██║██║ ╚████║███████║   ██║   ██║  ██║║
-  ║  ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝║
-  ║                                            ║
-  ║     >> instagram osint dossier v1.0 <<     ║
-  ╚════════════════════════════════════════════╝
+    ██╗███╗   ██╗███████╗████████╗ █████╗ 
+    ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗
+    ██║██╔██╗ ██║███████╗   ██║   ███████║
+    ██║██║╚██╗██║╚════██║   ██║   ██╔══██║
+    ██║██║ ╚████║███████║   ██║   ██║  ██║
+    ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝
+                                              
+     >> instagram osint dossier v1.0 <<     
+
 """
 
     @classmethod
@@ -83,21 +80,21 @@ class Banner:
     def display_dossier_complete(cls, filepath: str, image_path: str = "", summary: dict = None):
         """display the dossier complete panel"""
         print()
-        print(f"  {Colors.success('╔' + '═' * 58 + '╗')}")
-        print(f"  {Colors.success('║')}  {Colors.highlight('>> DOSSIER COMPLETE <<')}                            {Colors.success('║')}")
-        print(f"  {Colors.success('╠' + '═' * 58 + '╣')}")
-        print(f"  {Colors.success('║')}                                                    {Colors.success('║')}")
-        print(f"  {Colors.success('║')}  {Colors.tag('📄')} {Colors.info(filepath):<52} {Colors.success('║')}")
+        print(f"  {Colors.success('' + '' * 58 + '')}")
+        print(f"  {Colors.success('')}  {Colors.highlight('>> DOSSIER COMPLETE <<')}                            {Colors.success('')}")
+        print(f"  {Colors.success('' + '' * 58 + '')}")
+        print(f"  {Colors.success('')}                                                    {Colors.success('')}")
+        print(f"  {Colors.success('')}  {Colors.tag('📄')} {Colors.info(filepath):<52} {Colors.success('')}")
         if image_path:
-            print(f"  {Colors.success('║')}  {Colors.tag('🖼')} {Colors.muted(image_path):<52} {Colors.success('║')}")
-        print(f"  {Colors.success('║')}                                                    {Colors.success('║')}")
+            print(f"  {Colors.success('')}  {Colors.tag('🖼')} {Colors.muted(image_path):<52} {Colors.success('')}")
+        print(f"  {Colors.success('')}                                                    {Colors.success('')}")
 
         if summary:
-            print(f"  {Colors.success('║')}  {Colors.bold('📊 SUMMARY'):<54} {Colors.success('║')}")
+            print(f"  {Colors.success('')}  {Colors.bold('📊 SUMMARY'):<54} {Colors.success('')}")
             for key, value in summary.items():
-                line = f"  ├─ {key}: {value}"
-                print(f"  {Colors.success('║')}  {Colors.muted(line[:52]):<52} {Colors.success('║')}")
+                line = f"   {key}: {value}"
+                print(f"  {Colors.success('')}  {Colors.muted(line[:52]):<52} {Colors.success('')}")
 
-        print(f"  {Colors.success('║')}                                                    {Colors.success('║')}")
-        print(f"  {Colors.success('╚' + '═' * 58 + '╝')}")
+        print(f"  {Colors.success('')}                                                    {Colors.success('')}")
+        print(f"  {Colors.success('' + '' * 58 + '')}")
         print()

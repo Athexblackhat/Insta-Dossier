@@ -1,0 +1,63 @@
+# ═══════════════════════════════════════════════
+#  INSTA_DOSSIER — configuration
+# ═══════════════════════════════════════════════
+
+# ─── extraction modes ─────────────────────────
+modes:
+  passive:
+    scrape_profile: true
+    parse_bio: true
+    map_links: true
+    enumerate_reset: false
+    reconstruct_identity: false
+    verify_links: false
+  active:
+    scrape_profile: true
+    parse_bio: true
+    map_links: true
+    enumerate_reset: true
+    reconstruct_identity: false
+    verify_links: true
+  full:
+    scrape_profile: true
+    parse_bio: true
+    map_links: true
+    enumerate_reset: true
+    reconstruct_identity: true
+    verify_links: true
+
+# ─── network settings ────────────────────────
+network:
+  max_retries: 3
+  timeout: 15
+  max_concurrent_scrapes: 5
+  max_concurrent_verifications: 4
+  download_images: true
+
+# ─── proxies ──────────────────────────────────
+proxies:
+  file: "proxies/socks5_list.txt"
+  rotation_mode: "weighted"
+  max_failures: 2
+  cooldown_seconds: 600
+  min_proxies_required: 10
+  prefer_residential: true
+
+# ─── notifications ────────────────────────────
+notifications:
+  telegram_bot_token: null
+  telegram_chat_id: null
+  discord_webhook_url: null
+  notify_on_dossier: true
+  notify_on_business_email: true
+  notify_on_identity: true
+
+# ─── database ─────────────────────────────────
+database:
+  path: "output/insta_dossier.db"
+
+# ─── output ───────────────────────────────────
+output:
+  dir: "output"
+  pretty_print: true
+  max_dossiers_per_target: 10

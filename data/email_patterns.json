@@ -1,0 +1,50 @@
+{
+  "patterns": {
+    "first.last": {"template": "{first}.{last}", "prevalence": 0.35, "description": "john.doe@domain"},
+    "firstlast": {"template": "{first}{last}", "prevalence": 0.20, "description": "johndoe@domain"},
+    "first_last": {"template": "{first}_{last}", "prevalence": 0.08, "description": "john_doe@domain"},
+    "flast": {"template": "{f}{last}", "prevalence": 0.12, "description": "jdoe@domain"},
+    "first.l": {"template": "{first}.{l}", "prevalence": 0.07, "description": "john.d@domain"},
+    "f.last": {"template": "{f}.{last}", "prevalence": 0.06, "description": "j.doe@domain"},
+    "last.first": {"template": "{last}.{first}", "prevalence": 0.03, "description": "doe.john@domain"},
+    "firstl": {"template": "{first}{l}", "prevalence": 0.04, "description": "johnd@domain"},
+    "first": {"template": "{first}", "prevalence": 0.02, "description": "john@domain (rare, usually older accounts)"},
+    "lastfirst": {"template": "{last}{first}", "prevalence": 0.01, "description": "doejohn@domain"},
+    "nickname.last": {"template": "{nickname}.{last}", "prevalence": 0.01, "description": "johnny.doe@domain"},
+    "firstmiddlelast": {"template": "{first}{middle}{last}", "prevalence": 0.005, "description": "johnmdoe@domain"},
+    "fmlast": {"template": "{f}{m}{last}", "prevalence": 0.005, "description": "jmdoe@domain"}
+  },
+  "common_domains": [
+    {"domain": "gmail.com", "prevalence": 0.65},
+    {"domain": "yahoo.com", "prevalence": 0.12},
+    {"domain": "hotmail.com", "prevalence": 0.08},
+    {"domain": "outlook.com", "prevalence": 0.07},
+    {"domain": "icloud.com", "prevalence": 0.03},
+    {"domain": "protonmail.com", "prevalence": 0.01},
+    {"domain": "mail.com", "prevalence": 0.01},
+    {"domain": "aol.com", "prevalence": 0.01},
+    {"domain": "live.com", "prevalence": 0.01},
+    {"domain": "ymail.com", "prevalence": 0.005},
+    {"domain": "gmx.com", "prevalence": 0.002},
+    {"domain": "zoho.com", "prevalence": 0.002}
+  ],
+  "separators": ["", ".", "_", "-"],
+  "number_suffixes_common": ["", "1", "12", "123", "007", "01", "99", "23", "42", "69", "00", "7", "11", "2", "3", "8", "21", "10", "24", "365"],
+  "name_variations": {
+    "nicknames": {
+      "john": "johnny", "jonathan": "jon", "william": "will",
+      "robert": "rob", "james": "jim", "richard": "rick",
+      "michael": "mike", "david": "dave", "joseph": "joe",
+      "thomas": "tom", "christopher": "chris", "daniel": "dan",
+      "matthew": "matt", "anthony": "tony", "andrew": "andy",
+      "joshua": "josh", "nicholas": "nick", "benjamin": "ben",
+      "samuel": "sam", "nathaniel": "nate", "alexander": "alex",
+      "zachary": "zach", "gregory": "greg", "patrick": "pat",
+      "timothy": "tim", "stephen": "steve", "jeffrey": "jeff",
+      "katherine": "kate", "elizabeth": "liz", "jennifer": "jen",
+      "jessica": "jess", "stephanie": "steph", "rebecca": "becky",
+      "kimberly": "kim", "patricia": "pat", "deborah": "deb",
+      "sandra": "sandy", "victoria": "vicky", "margaret": "meg"
+    }
+  }
+}

@@ -1,0 +1,383 @@
+{
+  "platforms": {
+    "facebook": {
+      "patterns": ["facebook.com/", "fb.com/", "fb.me/", "facebook.com/profile.php"],
+      "extract_regex": "(?:facebook\\.com|fb\\.com|fb\\.me)/(?:profile\\.php\\?id=)?([\\w.\\-]+)",
+      "profile_url_template": "https://facebook.com/{handle}",
+      "category": "social",
+      "confidence_boost": 0.15
+    },
+    "twitter": {
+      "patterns": ["twitter.com/", "x.com/", "t.co/"],
+      "extract_regex": "(?:twitter\\.com|x\\.com)/(\\w{1,15})",
+      "profile_url_template": "https://x.com/{handle}",
+      "category": "social",
+      "confidence_boost": 0.10
+    },
+    "tiktok": {
+      "patterns": ["tiktok.com/@", "vm.tiktok.com/", "tiktok.com/@"],
+      "extract_regex": "tiktok\\.com/@([\\w.\\-]{1,30})",
+      "profile_url_template": "https://tiktok.com/@{handle}",
+      "category": "social",
+      "confidence_boost": 0.12
+    },
+    "youtube": {
+      "patterns": ["youtube.com/@", "youtube.com/channel/", "youtube.com/c/", "youtu.be/"],
+      "extract_regex": "youtube\\.com/(?:@|channel/|c/|user/)?([\\w\\-]{1,50})",
+      "profile_url_template": "https://youtube.com/@{handle}",
+      "category": "video",
+      "confidence_boost": 0.10
+    },
+    "linkedin": {
+      "patterns": ["linkedin.com/in/", "linkedin.com/company/", "linkedin.com/pub/"],
+      "extract_regex": "linkedin\\.com/(?:in|company|pub)/([\\w\\-]{1,100})",
+      "profile_url_template": "https://linkedin.com/in/{handle}",
+      "category": "professional",
+      "confidence_boost": 0.18
+    },
+    "github": {
+      "patterns": ["github.com/", "gist.github.com/"],
+      "extract_regex": "github\\.com/([\\w\\-]{1,39})(?:/|$)",
+      "profile_url_template": "https://github.com/{handle}",
+      "category": "development",
+      "confidence_boost": 0.15
+    },
+    "twitch": {
+      "patterns": ["twitch.tv/", "twitch.tv/"],
+      "extract_regex": "twitch\\.tv/(\\w{1,25})",
+      "profile_url_template": "https://twitch.tv/{handle}",
+      "category": "streaming",
+      "confidence_boost": 0.12
+    },
+    "snapchat": {
+      "patterns": ["snapchat.com/add/", "snapchat.com/add/"],
+      "extract_regex": "(?:snap(?:chat)?|sc)[:\\s]*@?(\\w[\\w.]{0,30})",
+      "profile_url_template": "https://snapchat.com/add/{handle}",
+      "category": "social",
+      "confidence_boost": 0.08
+    },
+    "telegram": {
+      "patterns": ["t.me/", "telegram.me/", "telegram.dog/"],
+      "extract_regex": "(?:t\\.me|telegram\\.me|telegram\\.dog)/(\\w[\\w.]{0,30})",
+      "profile_url_template": "https://t.me/{handle}",
+      "category": "messaging",
+      "confidence_boost": 0.08
+    },
+    "discord": {
+      "patterns": ["discord.gg/", "discord.com/invite/", "discord.com/users/"],
+      "extract_regex": "(?:discord\\.gg|discord\\.com/(?:invite|users))/([\\w#\\-]{1,40})",
+      "profile_url_template": "https://discord.com/users/{handle}",
+      "category": "messaging",
+      "confidence_boost": 0.06
+    },
+    "reddit": {
+      "patterns": ["reddit.com/user/", "reddit.com/u/", "redd.it/"],
+      "extract_regex": "reddit\\.com/(?:user|u)/([\\w\\-]{1,20})",
+      "profile_url_template": "https://reddit.com/user/{handle}",
+      "category": "social",
+      "confidence_boost": 0.10
+    },
+    "pinterest": {
+      "patterns": ["pinterest.com/", "pin.it/"],
+      "extract_regex": "pinterest\\.com/([\\w]{1,30})",
+      "profile_url_template": "https://pinterest.com/{handle}",
+      "category": "social",
+      "confidence_boost": 0.08
+    },
+    "spotify": {
+      "patterns": ["open.spotify.com/user/", "spotify.com/user/"],
+      "extract_regex": "spotify\\.com/user/([\\w]{1,30})",
+      "profile_url_template": "https://open.spotify.com/user/{handle}",
+      "category": "music",
+      "confidence_boost": 0.06
+    },
+    "medium": {
+      "patterns": ["medium.com/@", "medium.com/"],
+      "extract_regex": "medium\\.com/@([\\w.]{1,30})",
+      "profile_url_template": "https://medium.com/@{handle}",
+      "category": "blogging",
+      "confidence_boost": 0.10
+    },
+    "onlyfans": {
+      "patterns": ["onlyfans.com/"],
+      "extract_regex": "onlyfans\\.com/([\\w.]{1,30})",
+      "profile_url_template": "https://onlyfans.com/{handle}",
+      "category": "adult",
+      "confidence_boost": 0.20
+    },
+    "behance": {
+      "patterns": ["behance.net/", "behance.net/gallery/"],
+      "extract_regex": "behance\\.net/([\\w\\-]{1,30})",
+      "profile_url_template": "https://behance.net/{handle}",
+      "category": "creative",
+      "confidence_boost": 0.12
+    },
+    "dribbble": {
+      "patterns": ["dribbble.com/"],
+      "extract_regex": "dribbble\\.com/([\\w\\-]{1,30})",
+      "profile_url_template": "https://dribbble.com/{handle}",
+      "category": "creative",
+      "confidence_boost": 0.12
+    },
+    "soundcloud": {
+      "patterns": ["soundcloud.com/"],
+      "extract_regex": "soundcloud\\.com/([\\w\\-]{1,50})",
+      "profile_url_template": "https://soundcloud.com/{handle}",
+      "category": "music",
+      "confidence_boost": 0.08
+    },
+    "vimeo": {
+      "patterns": ["vimeo.com/"],
+      "extract_regex": "vimeo\\.com/([\\w\\-]{1,30})",
+      "profile_url_template": "https://vimeo.com/{handle}",
+      "category": "video",
+      "confidence_boost": 0.08
+    },
+    "substack": {
+      "patterns": ["substack.com/@", "substack.com/"],
+      "extract_regex": "(?:[\\w\\-]+\\.)?substack\\.com/@?([\\w\\-]{1,30})",
+      "profile_url_template": "https://substack.com/@{handle}",
+      "category": "blogging",
+      "confidence_boost": 0.10
+    },
+    "patreon": {
+      "patterns": ["patreon.com/"],
+      "extract_regex": "patreon\\.com/([\\w\\-]{1,30})",
+      "profile_url_template": "https://patreon.com/{handle}",
+      "category": "creator",
+      "confidence_boost": 0.15
+    },
+    "etsy": {
+      "patterns": ["etsy.com/shop/", "etsy.com/people/"],
+      "extract_regex": "etsy\\.com/(?:shop|people)/([\\w\\-]{1,50})",
+      "profile_url_template": "https://etsy.com/shop/{handle}",
+      "category": "shop",
+      "confidence_boost": 0.12
+    },
+    "cashapp": {
+      "patterns": ["cash.app/", "cash.me/"],
+      "extract_regex": "cash\\.(?:app|me)/(\\$?[\\w$]{1,30})",
+      "profile_url_template": "https://cash.app/{handle}",
+      "category": "payment",
+      "confidence_boost": 0.18
+    },
+    "venmo": {
+      "patterns": ["venmo.com/", "venmo.com/u/"],
+      "extract_regex": "venmo\\.com/(?:u/)?([\\w\\-]{1,30})",
+      "profile_url_template": "https://venmo.com/{handle}",
+      "category": "payment",
+      "confidence_boost": 0.18
+    },
+    "paypal": {
+      "patterns": ["paypal.me/", "paypal.com/paypalme/"],
+      "extract_regex": "paypal\\.(?:me|com/paypalme)/([\\w]{1,30})",
+      "profile_url_template": "https://paypal.me/{handle}",
+      "category": "payment",
+      "confidence_boost": 0.15
+    },
+    "buymeacoffee": {
+      "patterns": ["buymeacoffee.com/", "buymeacoff.ee/"],
+      "extract_regex": "buymeacoff(?:ee\\.com|\\.ee)/([\\w\\-]{1,30})",
+      "profile_url_template": "https://buymeacoffee.com/{handle}",
+      "category": "creator",
+      "confidence_boost": 0.12
+    },
+    "ko-fi": {
+      "patterns": ["ko-fi.com/"],
+      "extract_regex": "ko\\-fi\\.com/([\\w\\-]{1,30})",
+      "profile_url_template": "https://ko-fi.com/{handle}",
+      "category": "creator",
+      "confidence_boost": 0.12
+    },
+    "linktree": {
+      "patterns": ["linktr.ee/", "linktree.com/"],
+      "extract_regex": "linktr\\.ee/([\\w\\-]{1,30})",
+      "profile_url_template": "https://linktr.ee/{handle}",
+      "category": "aggregator",
+      "confidence_boost": 0.05
+    },
+    "beacons": {
+      "patterns": ["beacons.ai/", "beacons.page/"],
+      "extract_regex": "beacons\\.(?:ai|page)/([\\w\\-]{1,30})",
+      "profile_url_template": "https://beacons.ai/{handle}",
+      "category": "aggregator",
+      "confidence_boost": 0.05
+    },
+    "bento": {
+      "patterns": ["bento.me/"],
+      "extract_regex": "bento\\.me/([\\w\\-]{1,30})",
+      "profile_url_template": "https://bento.me/{handle}",
+      "category": "aggregator",
+      "confidence_boost": 0.05
+    },
+    "carrd": {
+      "patterns": ["carrd.co/"],
+      "extract_regex": "carrd\\.co/([\\w\\-]{1,30})",
+      "profile_url_template": "https://carrd.co/{handle}",
+      "category": "website",
+      "confidence_boost": 0.08
+    },
+    "signal": {
+      "patterns": ["signal.me/", "signal.group/"],
+      "extract_regex": "signal\\.me/#p/([\\w]+)",
+      "profile_url_template": "https://signal.me/#p/{handle}",
+      "category": "messaging",
+      "confidence_boost": 0.10
+    },
+    "whatsapp": {
+      "patterns": ["wa.me/", "api.whatsapp.com/send"],
+      "extract_regex": "wa\\.me/(\\+?\\d{7,15})",
+      "profile_url_template": "https://wa.me/{handle}",
+      "category": "messaging",
+      "confidence_boost": 0.20
+    },
+    "line": {
+      "patterns": ["line.me/ti/p/", "line.me/R/ti/p/"],
+      "extract_regex": "line\\.me/(?:R/)?ti/p/([\\w\\-]+)",
+      "profile_url_template": "https://line.me/ti/p/{handle}",
+      "category": "messaging",
+      "confidence_boost": 0.10
+    },
+    "wechat": {
+      "patterns": ["weixin.qq.com/", "wechat.com/"],
+      "extract_regex": "(?:weixin\\.qq\\.com|wechat\\.com).*?([\\w\\-]{6,30})",
+      "profile_url_template": "weixin://dl/business/?t={handle}",
+      "category": "messaging",
+      "confidence_boost": 0.08
+    },
+    "threads": {
+      "patterns": ["threads.net/@", "threads.net/"],
+      "extract_regex": "threads\\.net/@([\\w.]{1,30})",
+      "profile_url_template": "https://threads.net/@{handle}",
+      "category": "social",
+      "confidence_boost": 0.12
+    },
+    "mastodon": {
+      "patterns": ["mastodon.social/@", "mastodon.online/@"],
+      "extract_regex": "mastodon[\\w.]*/@([\\w]{1,30})",
+      "profile_url_template": "https://mastodon.social/@{handle}",
+      "category": "social",
+      "confidence_boost": 0.10
+    },
+    "bluesky": {
+      "patterns": ["bsky.app/profile/"],
+      "extract_regex": "bsky\\.app/profile/([\\w.]{1,50})",
+      "profile_url_template": "https://bsky.app/profile/{handle}",
+      "category": "social",
+      "confidence_boost": 0.10
+    }
+  },
+  "link_aggregators": {
+    "linktr.ee": {
+      "domain": "linktr.ee",
+      "extract_method": "html_parse",
+      "link_selector_patterns": [
+        "data-url=[\"']([^\"']+)[\"']",
+        "href=[\"'](https?://[^\"']+)[\"'][^>]*class=[\"'][^\"']*link[^\"']*",
+        "href=[\"'](https?://[^\"']+)[\"']"
+      ],
+      "max_links": 30
+    },
+    "beacons.ai": {
+      "domain": "beacons.ai",
+      "extract_method": "html_parse",
+      "link_selector_patterns": [
+        "href=[\"'](https?://[^\"']+)[\"'][^>]*class=[\"'][^\"']*Link[^\"']*",
+        "data-link=[\"']([^\"']+)[\"']",
+        "href=[\"'](https?://[^\"']+)[\"']"
+      ],
+      "max_links": 30
+    },
+    "campsite.bio": {
+      "domain": "campsite.bio",
+      "extract_method": "html_parse",
+      "link_selector_patterns": [
+        "href=[\"'](https?://[^\"']+)[\"'][^>]*class=[\"'][^\"']*link[^\"']*",
+        "href=[\"'](https?://[^\"']+)[\"']"
+      ],
+      "max_links": 25
+    },
+    "bento.me": {
+      "domain": "bento.me",
+      "extract_method": "html_parse",
+      "link_selector_patterns": [
+        "href=[\"'](https?://[^\"']+)[\"']",
+        "data-url=[\"']([^\"']+)[\"']"
+      ],
+      "max_links": 25
+    },
+    "lnk.bio": {
+      "domain": "lnk.bio",
+      "extract_method": "html_parse",
+      "link_selector_patterns": [
+        "href=[\"'](https?://[^\"']+)[\"'][^>]*class=[\"'][^\"']*link[^\"']*"
+      ],
+      "max_links": 20
+    },
+    "solo.to": {
+      "domain": "solo.to",
+      "extract_method": "html_parse",
+      "link_selector_patterns": [
+        "href=[\"'](https?://[^\"']+)[\"']"
+      ],
+      "max_links": 20
+    },
+    "allmylinks.com": {
+      "domain": "allmylinks.com",
+      "extract_method": "html_parse",
+      "link_selector_patterns": [
+        "href=[\"'](https?://[^\"']+)[\"'][^>]*class=[\"'][^\"']*link[^\"']*"
+      ],
+      "max_links": 25
+    },
+    "hoo.be": {
+      "domain": "hoo.be",
+      "extract_method": "html_parse",
+      "link_selector_patterns": [
+        "href=[\"'](https?://[^\"']+)[\"']"
+      ],
+      "max_links": 20
+    },
+    "bio.site": {
+      "domain": "bio.site",
+      "extract_method": "html_parse",
+      "link_selector_patterns": [
+        "href=[\"'](https?://[^\"']+)[\"']"
+      ],
+      "max_links": 20
+    },
+    "msha.ke": {
+      "domain": "msha.ke",
+      "extract_method": "html_parse",
+      "link_selector_patterns": [
+        "href=[\"'](https?://[^\"']+)[\"']"
+      ],
+      "max_links": 15
+    },
+    "carrd.co": {
+      "domain": "carrd.co",
+      "extract_method": "html_parse",
+      "link_selector_patterns": [
+        "href=[\"'](https?://[^\"']+)[\"']"
+      ],
+      "max_links": 30
+    },
+    "about.me": {
+      "domain": "about.me",
+      "extract_method": "html_parse",
+      "link_selector_patterns": [
+        "href=[\"'](https?://[^\"']+)[\"']"
+      ],
+      "max_links": 20
+    }
+  },
+  "cross_platform_correlation": {
+    "same_handle_platforms": ["twitter", "tiktok", "github", "twitch", "reddit", "pinterest", "medium"],
+    "handle_variations": {
+      "dot_to_underscore": {"from": ".", "to": "_"},
+      "underscore_to_dot": {"from": "_", "to": "."},
+      "remove_numbers": {"regex": "\\d+$", "replace": ""},
+      "add_underscore": {"from": "", "to": "_", "position": "suffix"}
+    }
+  }
+}

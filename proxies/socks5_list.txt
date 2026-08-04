@@ -1,0 +1,5 @@
+# ek proxy per line — format: ip:port ya user:pass@ip:port
+# socks4 aur socks5 dono supported hain
+# example: 45.67.89.12:9050
+# example: user123:pass456@103.45.67.89:1080
+# symlink to your tiktok_obliterator/proxies/socks5_list.txt if same file
